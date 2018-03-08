@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ProductPage from "../product-page/product-page";
+import Submenu from "../submenu/submenu";
 import "./main.css";
 
 class Main extends Component {
@@ -39,10 +40,10 @@ class Main extends Component {
         title: "This Thing is a monster!",
         date: "08/20/2013",
         stars: [
-          <img index={1} src="./assets/star.png" />,
-          <img index={2} src="./assets/star.png" />,
-          <img index={3} src="./assets/star.png" />,
-          <img index={4} src="./assets/star.png" />
+          <img key={1} src="./assets/star.png" />,
+          <img key={2} src="./assets/star.png" />,
+          <img key={3} src="./assets/star.png" />,
+          <img key={4} src="./assets/star.png" />
         ],
         review: `I picked up this jacket for use in San Francisco and the surrounded Bay Area (Lake Tahoe included). I use this jacket for everything. It is often cloudy/drizzly/cold in SF and this jacket deals with it all. I have not tried in heavy rain, but in drizzly conditions, the DWR treatment defininitely makes small drops bead right off. It also has a nice fleece-like liner inside and keeps me really warm down to 40 degree or so. In Tahoe, I have used this with a shirt or base layer, mid layer fleece, and then this jacket. I don't get cold too easily but in temps 20's - 30's I felt great (with some gloves and a beanie of course). I have not tried it skiing yet because I snowboard and to be honest it wouldn't be quite large enough (I like baggier snowboard clothing). But I have seen people who wear softshells skiing all the time. I also use this when I go to work and want a jacket that dresses up nice. With slacks, nice shoes, and a button up it looks great. I am 6' and about 190 lbs (34 in arms) and the large fits perfect. The pockets are well designed as well. The soft shell is the new "do-everything" jacket; wind/water resistent but also maleable and comfy for wearing anywhere. I highly recommend this jacket.`
       },
@@ -53,13 +54,15 @@ class Main extends Component {
         title: "Luv it so much I bought 2",
         date: "01/12/2013",
         stars: [
-          <img index={1} src="./assets/star.png" />,
-          <img index={2} src="./assets/star.png" />,
-          <img index={3} src="./assets/star.png" />
+          <img key={1} src="./assets/star.png" />,
+          <img key={2} src="./assets/star.png" />,
+          <img key={3} src="./assets/star.png" />
         ],
         review: `Loved this jacket so much from previous years I decided to buy a second in a different color. I'm tall and fairly slender and its tailored silhouette fits me nicely. For perspective I'm around 6'3" ~150 lbs. and a large does the trick. I'll wear this for all of fall and into the winter. Despite not being bulky or baggy I find it good and warm for anything down to 40 degrees and perhaps lower if you're keeping up on your layering. For weather at freezing or below you should consider something heavier.`
       }
     ];
+
+    const clothing = ["Outerwear", "Hiking Shoes / Boots", "Gloves", "Hats"];
 
     return (
       <div className="site">
@@ -72,11 +75,16 @@ class Main extends Component {
             />
             <div className="header-menu">
               <div className="header-search-container">
-                <input
-                  className="header-search"
-                  type="text"
-                  placeholder="SEARCH FOR GEAR"
-                />
+                <form role="form">
+                  <input
+                    className="header-search"
+                    type="text"
+                    placeholder="SEARCH FOR GEAR"
+                  />
+                  <button type="submit" name="submit">
+                    <img src="./assets/search-icon.png" />
+                  </button>
+                </form>
               </div>
               <div className="header-links">
                 <a href="www.facebook.com">
@@ -102,12 +110,47 @@ class Main extends Component {
         </header>
 
         <nav id="navigation" role="navigation">
-          <ul>
-            <li>Camping</li> |
-            <li>Clothing</li> |
-            <li>Fishing</li> |
-            <li>Hiking</li> |
-            <li>Biking</li>
+          <ul id="nav-bar">
+            <li className="nav-item nav-camping">
+              Camping
+              <img
+                className="arrow"
+                src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Arrow-down.svg"
+              />
+            </li>
+            <hr />
+            <li className="nav-item nav-clothing">
+              Clothing
+              <img
+                className="arrow"
+                src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Arrow-down.svg"
+              />
+              <Submenu classname="submenu clothing" items={clothing} />
+            </li>
+            <hr />
+            <li className="nav-item nav-fishing">
+              Fishing
+              <img
+                className="arrow"
+                src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Arrow-down.svg"
+              />
+            </li>
+            <hr />
+            <li className="nav-item nav-hiking">
+              Hiking
+              <img
+                className="arrow"
+                src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Arrow-down.svg"
+              />
+            </li>
+            <hr />
+            <li className="nav-item nav-biking">
+              Biking
+              <img
+                className="arrow"
+                src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Arrow-down.svg"
+              />
+            </li>
           </ul>
         </nav>
 
@@ -124,6 +167,11 @@ class Main extends Component {
             />
             <div className="footer-menu">
               <div className="footer-links">
+                <a>About Us</a> |
+                <a>Contact Us</a> |
+                <a>Privacy Policy</a> |
+                <a>Terms of Service</a> |
+                <a>Site Map</a>
                 <a href="www.facebook.com">
                   <img
                     className="facebook-icon"
@@ -138,9 +186,6 @@ class Main extends Component {
                     alt="Twitter link"
                   />
                 </a>
-                <a>My Account</a> |
-                <a>Cart</a> |
-                <a>Logout</a>
               </div>
             </div>
           </div>

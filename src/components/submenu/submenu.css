@@ -1,0 +1,28 @@
+.submenu {
+  position: relative;
+  width: 200px;
+  border: 1px solid #2c5362;
+}
+
+.submenu ul {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 200;
+  display: flex;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.submenu li {
+  padding: 10px 0;
+}
+
+.submenu li:not(:last-child) {
+  border-bottom: 1px solid #2c5362;
+}

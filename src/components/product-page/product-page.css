@@ -6,11 +6,31 @@
   background-position: center;
 }
 
-#product-page .content-container {
+#product-item .content-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  width: 770px;
+  padding: 15px;
+  padding-bottom: 25px;
+}
+
+.page-nav {
+  display: flex;
+}
+
+.page-nav p {
+  margin: 0 5px;
+}
+
+.page-nav .category {
+  text-decoration: underline;
+}
+
+.page-nav .current {
+  font-weight: 400;
 }
 
 .item-box {
-  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -75,7 +95,7 @@
 .buttons-grid button {
   padding: 7px;
   color: #e1e1e1;
-  background-color: #678792;
+  background-color: #4698a4;
 }
 
 .buttons-grid input {

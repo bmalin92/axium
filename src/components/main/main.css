@@ -26,6 +26,10 @@
   width: 100%;
 }
 
+.header-search-container form {
+  position: relative;
+}
+
 #site-header input {
   width: calc(100% - 10px);
   border: 1px solid rgb(211, 211, 211);
@@ -33,6 +37,17 @@
   padding: 4px;
   margin-bottom: 10px;
   flex: 1;
+}
+
+#site-header .header-search-container button {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  border: none;
+}
+
+#site-header .header-search-container img {
+  width: 8px;
 }
 
 .header-links {
@@ -62,8 +77,8 @@
   color: #2c5362;
 }
 
-#navigation ul {
-  width: 769px;
+#navigation #nav-bar {
+  width: 800px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -73,13 +88,32 @@
   margin-left: auto;
   margin-right: auto;
   justify-content: space-around;
+}
+
+#navigation ul li.nav-item {
+  flex: 5;
+  text-align: center;
+  padding-left: 5px;
+  cursor: pointer;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-#navigation ul li {
-  flex: 5;
-  text-align: center;
+#navigation img {
+  width: 24px;
+  filter: invert(50%);
+}
+
+#navigation .submenu {
+  display: none;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -30px;
+  background-color: #ececec;
+}
+
+#navigation .nav-clothing:hover > .submenu {
+  display: block;
 }
 
 #site-footer {
@@ -96,26 +130,12 @@
 }
 
 #site-footer .footer-menu {
-  width: 210px;
+  width: 50%;
   font-size: 10px;
   font-weight: 200;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  margin-top: 10px;
-}
-
-.footer-menu .footer-search-container {
-  width: 100%;
-}
-
-#site-footer input {
-  width: calc(100% - 10px);
-  border: 1px solid rgb(211, 211, 211);
-  font-size: 8px;
-  padding: 4px;
-  margin-bottom: 10px;
-  flex: 1;
+  flex-direction: row;
 }
 
 .footer-links {
@@ -123,7 +143,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex: 1;
 }
 
 .footer-links .facebook-icon {

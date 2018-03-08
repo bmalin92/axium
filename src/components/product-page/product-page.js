@@ -29,6 +29,10 @@ class ProductPage extends Component {
       <div id="product-page">
         <div id="product-item">
           <div className="content-container">
+            <div className="page-nav">
+              <p className="category">Clothing</p> >
+              <p className="current">Outerwear</p>
+            </div>
             <div className="item-box">
               <div className="item-image-container">
                 <img
