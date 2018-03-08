@@ -2,6 +2,58 @@
   background-color: black;
 }
 
+#site-header .content-container {
+  justify-content: space-between;
+  padding: 35px 0 40px 0;
+}
+
+#site-header .logo {
+  height: 65px;
+  padding: 0 10px;
+}
+
+#site-header .header-menu {
+  width: 210px;
+  font-size: 10px;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.header-menu .header-search-container {
+  width: 100%;
+}
+
+#site-header input {
+  width: calc(100% - 10px);
+  border: 1px solid rgb(211, 211, 211);
+  font-size: 8px;
+  padding: 4px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.header-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.header-links .facebook-icon {
+  height: 14px;
+  margin-left: 2px;
+}
+
+.header-links .twitter-icon {
+  height: 16px;
+  padding-top: 10px;
+  margin-right: 2px;
+}
+
 #navigation {
   -moz-box-shadow: inset 0px 9px 8px -10px black;
   -webkit-box-shadow: inset 0px 9px 8px -10px black;
@@ -16,6 +68,7 @@
   padding: 0;
   list-style: none;
   font-size: 24px;
+  font-weight: 200;
   display: flex;
   margin-left: auto;
   margin-right: auto;

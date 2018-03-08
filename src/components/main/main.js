@@ -23,7 +23,7 @@ class Main extends Component {
         "Made in the Phillippines"
       ],
       sizes: ["Small", "Medium", "Large"],
-      colors: ["grey", "navy"],
+      colors: ["Grey", "Navy"],
       itemBio: [
         "Our most insulated jacket to date, the city-styled Highline is designed to keep you warm during the deep freeze of winter",
         "With 300 grams of PimraLoft ONE insulation, the Highline offers incredible heat retention while remaining form fitting and low volume - essentially all the warmth of a puffer jacket without all the puff. Its outer shell is made from a water-resistant Schoeller microfiber fabric that has been diagonally quilted, while its inside liner is made from a silky-soft microfiber ripstop nylon.",
@@ -56,12 +56,34 @@ class Main extends Component {
       <div className="site">
         <header id="site-header" role="banner">
           <div className="content-container" id="header-content">
-            <img src="./assets/axium-logo-main.png" alt="Axium logo" />
+            <img
+              className="logo"
+              src="./assets/axium-logo-main.png"
+              alt="Axium logo"
+            />
             <div className="header-menu">
-              <input type="text" placeholder="SEARCH FOR GEAR" />
+              <div className="header-search-container">
+                <input
+                  className="header-search"
+                  type="text"
+                  placeholder="SEARCH FOR GEAR"
+                />
+              </div>
               <div className="header-links">
-                <a>Facebook</a>
-                <a>Twitter</a>
+                <a href="www.facebook.com">
+                  <img
+                    className="facebook-icon"
+                    src="./assets/fb-icon.png"
+                    alt="Facebook link"
+                  />
+                </a>
+                <a hred="www.twitter.com">
+                  <img
+                    className="twitter-icon"
+                    src="./assets/twitter-icon.png"
+                    alt="Twitter link"
+                  />
+                </a>
                 <a>My Account</a> |
                 <a>Cart</a> |
                 <a>Logout</a>
