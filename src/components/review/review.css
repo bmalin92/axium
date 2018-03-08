@@ -2,9 +2,6 @@
   display: flex;
 }
 
-.review .user-container {
-}
-
 .review .user-container img {
   width: 100px;
   border: 1px solid #e1e1e1;

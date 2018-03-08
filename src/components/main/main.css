@@ -104,6 +104,10 @@
   filter: invert(50%);
 }
 
+#navigation .submenu-component {
+  padding: 0;
+}
+
 #navigation .submenu {
   display: none;
   position: absolute;

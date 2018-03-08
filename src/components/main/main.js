@@ -125,7 +125,10 @@ class Main extends Component {
                 className="arrow"
                 src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Arrow-down.svg"
               />
-              <Submenu classname="submenu clothing" items={clothing} />
+              <Submenu
+                classname="submenu-component clothing"
+                items={clothing}
+              />
             </li>
             <hr />
             <li className="nav-item nav-fishing">
