@@ -43,12 +43,12 @@
 }
 
 .item-box .item-image-container {
-  flex: 3;
+  flex: 5;
   justify-content: center;
 }
 
 .item-box .item-description {
-  flex: 2;
+  flex: 4;
 }
 
 .item-description h2 {
@@ -96,6 +96,10 @@
   padding: 7px;
   color: #e1e1e1;
   background-color: #4698a4;
+}
+
+.buttons-grid button:hover {
+  cursor: pointer;
 }
 
 .buttons-grid input {
@@ -192,7 +196,9 @@
 }
 
 #reviews .review-header a {
-  margin: 0 50px;
+  margin: 0 25px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #reviews .user-reviews {

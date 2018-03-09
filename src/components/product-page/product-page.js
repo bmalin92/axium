@@ -1,8 +1,25 @@
 import React, { Component } from "react";
 import Review from "../review/review";
+import Modal from "../modal/modal";
 import "./product-page.css";
 
 class ProductPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      reviewModal: false
+    };
+  }
+
+  reviewModal = () => {
+    this.setState({ reviewModal: true });
+  };
+
+  toggleModal = event => {
+    event.preventDefault();
+    this.setState({ reviewModal: false });
+  };
+
   render() {
     const item = this.props.item;
     const reviews = this.props.reviews.map((review, index) => (
@@ -45,7 +62,7 @@ class ProductPage extends Component {
                 <h2>{item.name.toUpperCase()}</h2>
                 <ul className="item-specs">{itemSpecs}</ul>
                 <div className="item-buttons">
-                  <form role="form">
+                  <form>
                     <div className="buttons-grid styled-select">
                       <select>
                         <option value="">Select Size</option>
@@ -95,11 +112,16 @@ class ProductPage extends Component {
           <div className="content-container">
             <div className="review-header">
               <h3>Reviews</h3>
-              <a>Write a review on this product</a>
+              <a onClick={this.reviewModal}>Write a review on this product</a>
             </div>
             <div className="user-reviews">{reviews}</div>
           </div>
         </div>
+        <Modal
+          reviewModal={this.state.reviewModal}
+          product={item}
+          toggleModal={this.toggleModal}
+        />
       </div>
     );
   }

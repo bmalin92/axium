@@ -1,7 +1,6 @@
 .submenu {
   position: relative;
   width: 200px;
-  border: 1px solid #2c5362;
 }
 
 .submenu ul {
@@ -16,6 +15,11 @@
   align-items: center;
   padding-top: 0;
   padding-bottom: 0;
+  border: 1px solid #2c5362;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .submenu li {
@@ -28,6 +32,8 @@
   margin-top: -1px;
   width: 100%;
   border: 1px solid #2c5362;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .submenu li:not(:last-child) {

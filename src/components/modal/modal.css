@@ -1,0 +1,123 @@
+#modal-background {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: fixed;
+  z-index: 10;
+}
+
+#review-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#review-modal form {
+  display: block;
+  background-color: white;
+  width: 400px;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+  color: #454545;
+  font-family: "Raleway", sans-serif;
+  position: fixed;
+  top: 30%;
+  z-index: 50;
+}
+
+#review-modal .rating-selection {
+  display: flex;
+}
+
+.rating-selection h4 {
+  margin: 0 5px;
+  font-weight: 300;
+}
+
+.rating-selection .review-product-name {
+  font-weight: 500;
+}
+
+.rating {
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.rating-input {
+  float: right;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0 0 0 -16px;
+  opacity: 0;
+}
+
+.rating-star,
+.rating:hover .rating-star {
+  position: relative;
+  float: right;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("/assets/star.png") no-repeat 0 0px;
+  background-size: 16px 16px;
+}
+
+.rating .rating-star,
+.rating-input {
+  filter: brightness(90%) grayscale(100%);
+}
+
+.rating:hover .rating-star:hover,
+.rating:hover .rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star {
+  background-position: 0 0;
+  filter: hue-rotate(310deg) saturate(2500%) contrast(100%) brightness(70%);
+}
+
+.review-title-container {
+  display: flex;
+  margin: 5px 0px 5px 5px;
+}
+
+.review-title-container h4 {
+  flex: 1;
+  margin: 0;
+  font-weight: 300;
+  margin-right: 5px;
+}
+
+.review-title-container input {
+  flex: 3;
+  border: 1px solid #cecece;
+  font-family: "Raleway", sans-serif;
+}
+
+.review-text-container {
+  width: 100%;
+}
+
+.review-text-container textarea {
+  min-width: calc(100% - 6px);
+  max-width: calc(100% - 6px);
+  height: 100px;
+  border: 1px solid #cecece;
+  font-family: "Raleway", sans-serif;
+}
+
+.review-submit {
+  margin-top: 5px;
+  float: right;
+  padding: 5px;
+  border: 1px solid #616d79;
+  border-radius: 2px;
+  background-color: #4698a4;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.7em;
+  font-weight: 200;
+  color: white;
+}
