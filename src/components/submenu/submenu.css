@@ -34,6 +34,7 @@
   border: 1px solid #2c5362;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
+  color: white;
 }
 
 .submenu li:not(:last-child) {

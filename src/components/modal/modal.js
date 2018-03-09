@@ -63,7 +63,7 @@ class Modal extends Component {
             <input className="review-title-input" type="text" />
           </div>
           <div className="review-text-container">
-            <textarea placeholder=" - Write your review here" />
+            <textarea placeholder=" - Write your review here - " />
           </div>
           <button className="review-submit" type="submit" name="submit">
             Submit Review

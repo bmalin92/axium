@@ -17,7 +17,9 @@ class ProductPage extends Component {
   };
 
   decreaseQuantity = () => {
-    this.setState({ quantity: this.state.quantity - 1 });
+    if (this.state.quantity > 1) {
+      this.setState({ quantity: this.state.quantity - 1 });
+    }
   };
 
   reviewModal = () => {
@@ -84,6 +86,7 @@ class ProductPage extends Component {
                         {colors}
                       </select>
                     </div>
+                    <p className="quantity-title">Quantity</p>
                     <div className="buttons-grid">
                       <div className="product-quantity">
                         <img

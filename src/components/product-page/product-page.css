@@ -83,6 +83,13 @@
   margin: 20px 20px 0 0;
 }
 
+.quantity-title {
+  width: 100%;
+  margin-bottom: -15px;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
 .product-quantity {
   display: flex;
   width: 100%;
@@ -122,6 +129,7 @@
 }
 
 .buttons-grid button {
+  font-size: 0.9em;
   padding: 7px;
   color: #e1e1e1;
   background-color: #4698a4;
@@ -171,7 +179,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border: none;
   height: 29px;
   padding: 5px 10px;
-  font-size: 10px;
+  font-size: 0.9em;
   /*for firefox*/
   -moz-appearance: none;
   /*for chrome*/

@@ -51,7 +51,7 @@ class Main extends Component {
         id: 2,
         authorName: "Jennie Loren",
         authorPicture: "./assets/reviewer2.png",
-        title: "Luv it so much I bought 2",
+        title: "Luv it so much I bought 2!",
         date: "01/12/2013",
         stars: [
           <img alt="" key={1} src="./assets/star.png" />,
