@@ -98,6 +98,7 @@ class ProductPage extends Component {
                           min="1"
                           max="20"
                           placeholder="1"
+                          onChange={() => {}}
                           value={this.state.quantity}
                           step="1"
                         />
