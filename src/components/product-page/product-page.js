@@ -7,9 +7,18 @@ class ProductPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      reviewModal: false
+      reviewModal: false,
+      quantity: 1
     };
   }
+
+  increaseQuantity = () => {
+    this.setState({ quantity: this.state.quantity + 1 });
+  };
+
+  decreaseQuantity = () => {
+    this.setState({ quantity: this.state.quantity - 1 });
+  };
 
   reviewModal = () => {
     this.setState({ reviewModal: true });
@@ -76,14 +85,29 @@ class ProductPage extends Component {
                       </select>
                     </div>
                     <div className="buttons-grid">
-                      <input
-                        type="number"
-                        name="quantity"
-                        min="1"
-                        max="20"
-                        placeholder="1"
-                        step="1"
-                      />
+                      <div className="product-quantity">
+                        <img
+                          className="decrease-quantity"
+                          src="./assets/downarrow.png"
+                          alt="decrease quantity"
+                          onClick={this.decreaseQuantity}
+                        />
+                        <input
+                          type="number"
+                          name="quantity"
+                          min="1"
+                          max="20"
+                          placeholder="1"
+                          value={this.state.quantity}
+                          step="1"
+                        />
+                        <img
+                          className="increase-quantity"
+                          src="./assets/uparrow.png"
+                          alt="increase quantity"
+                          onClick={this.increaseQuantity}
+                        />
+                      </div>
                     </div>
                     <div className="buttons-grid">
                       <button type="submit" value="submit">
