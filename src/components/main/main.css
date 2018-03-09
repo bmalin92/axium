@@ -1,3 +1,4 @@
+/* header */
 #site-header {
   background-color: black;
 }
@@ -69,6 +70,7 @@
   margin-right: 2px;
 }
 
+/* navigation bar */
 #navigation {
   -moz-box-shadow: inset 0px 9px 8px -10px black;
   -webkit-box-shadow: inset 0px 9px 8px -10px black;
@@ -127,6 +129,7 @@
   transition-duration: 0.5s;
 }
 
+/* website footer */
 #site-footer {
   background-color: black;
 }
